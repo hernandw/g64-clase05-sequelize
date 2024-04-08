@@ -2,7 +2,7 @@ import expres from 'express';
 import routes from './routes/projectRoutes.js';
 const app = expres();
 
-import './model/project.js'
+
 
 const PORT = process.env.PORT || 3000;
 

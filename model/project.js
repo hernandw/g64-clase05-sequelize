@@ -17,6 +17,10 @@ const Project = sequelize.define('project', {
     description: {
         type: DataTypes.STRING
     }
-})
+}, {
+    timestamps: true
+}
+    
+)
 
 export default Project
