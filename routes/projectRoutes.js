@@ -3,12 +3,12 @@ import sequelize from '../config/db.js'
 import { getProjects, createProjects, updateProjects, deleteProject } from '../controllers/projectController.js';
 const router = express.Router();
 
-router.get('/', getProjects)
+router.get('/project', getProjects)
 
-router.post('/', createProjects);
+router.post('/project', createProjects);
 
-router.put('/', updateProjects);
+router.put('/project/:id', updateProjects);
 
-router.delete('/', deleteProject);
+router.delete('/project/:id', deleteProject);
 
 export default router

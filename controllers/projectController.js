@@ -12,6 +12,9 @@ const getProjects = async (req, res) => {
 
 const createProjects = async (req, res) => {
     try {
+        const { name, priority, description } = req.body;
+        const newProject = await project.create({ name, priority, description })
+        console.log(newProject)
         res.send('Creando Proyectos')
     } catch (error) {
          console.log(error.message);

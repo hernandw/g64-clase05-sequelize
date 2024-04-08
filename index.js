@@ -1,10 +1,13 @@
-import expres from 'express';
+import express from 'express';
 import routes from './routes/projectRoutes.js';
-const app = expres();
+const app = express();
 
 
 
 const PORT = process.env.PORT || 3000;
+
+//Middleware
+app.use(express.json());
 
 //Routes
 app.use('/', routes);
